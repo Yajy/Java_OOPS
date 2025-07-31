@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/pom.xml" />
+              <option name="originalContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;&#10;    &lt;groupId&gt;org.example&lt;/groupId&gt;&#10;    &lt;artifactId&gt;Assignment1_&lt;/artifactId&gt;&#10;    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;&#10;&#10;    &lt;properties&gt;&#10;        &lt;maven.compiler.source&gt;21&lt;/maven.compiler.source&gt;&#10;        &lt;maven.compiler.target&gt;21&lt;/maven.compiler.target&gt;&#10;        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;&#10;    &lt;/properties&gt;&#10;&#10;    &lt;dependencies&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;&#10;            &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;&#10;            &lt;version&gt;5.9.2&lt;/version&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;junit&lt;/groupId&gt;&#10;            &lt;artifactId&gt;junit&lt;/artifactId&gt;&#10;            &lt;version&gt;4.13.2&lt;/version&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;&#10;    &lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;&#10;                &lt;version&gt;3.0.0&lt;/version&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;&#10;    &lt;groupId&gt;org.example&lt;/groupId&gt;&#10;    &lt;artifactId&gt;Assignment1_&lt;/artifactId&gt;&#10;    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;&#10;&#10;    &lt;properties&gt;&#10;        &lt;maven.compiler.source&gt;21&lt;/maven.compiler.source&gt;&#10;        &lt;maven.compiler.target&gt;21&lt;/maven.compiler.target&gt;&#10;        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;&#10;    &lt;/properties&gt;&#10;&#10;    &lt;dependencies&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;&#10;            &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;&#10;            &lt;version&gt;5.9.2&lt;/version&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;&#10;    &lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;&#10;                &lt;version&gt;3.0.0&lt;/version&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/ImportedItemTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/ImportedItemTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class ImportedItemTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        double importDuty = 0.10 * price;&#10;        double costAfterDuty = price + importDuty;&#10;        double surcharge;&#10;        if (costAfterDuty &lt;= 100) {&#10;            surcharge = 5;&#10;        } else if (costAfterDuty &lt;= 200) {&#10;            surcharge = 10;&#10;        } else {&#10;            surcharge = 0.05 * costAfterDuty;&#10;        }&#10;        return importDuty + surcharge;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/ImportedTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/ImportedTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class ImportedTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        double importDuty = 0.10 * price;&#10;        double costAfterDuty = price + importDuty;&#10;        double surcharge;&#10;        if (costAfterDuty &lt;= 100) {&#10;            surcharge = 5;&#10;        } else if (costAfterDuty &lt;= 200) {&#10;            surcharge = 10;&#10;        } else {&#10;            surcharge = 0.05 * costAfterDuty;&#10;        }&#10;        return importDuty + surcharge;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/ItemType.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/ItemType.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public enum ItemType implements TaxStrategy {&#10;    RAW {&#10;        @Override&#10;        public double calculateTax(double price) {&#10;            return 0.125 * price;&#10;        }&#10;    },&#10;    MANUFACTURED {&#10;        @Override&#10;        public double calculateTax(double price) {&#10;            double taxOnRaw = 0.125 * price;&#10;            return taxOnRaw + 0.02 * (price + taxOnRaw);&#10;        }&#10;    },&#10;    IMPORTED {&#10;        @Override&#10;        public double calculateTax(double price) {&#10;            double importDuty = 0.10 * price;&#10;            double costAfterDuty = price + importDuty;&#10;            double surcharge;&#10;            if (costAfterDuty &lt;= 100) {&#10;                surcharge = 5;&#10;            } else if (costAfterDuty &lt;= 200) {&#10;                surcharge = 10;&#10;            } else {&#10;                surcharge = 0.05 * costAfterDuty;&#10;            }&#10;            return importDuty + surcharge;&#10;        }&#10;    };&#10;&#10;    public static ItemType fromString(String type) {&#10;        try {&#10;            return valueOf(type.toUpperCase());&#10;        } catch (IllegalArgumentException e) {&#10;            throw new IllegalArgumentException(&quot;Invalid item type. Allowed: raw, manufactured, imported.&quot;);&#10;        }&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/ManufacturedItemTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/ManufacturedItemTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class ManufacturedItemTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        double taxOnRaw = 0.125 * price;&#10;        return taxOnRaw + 0.02 * (price + taxOnRaw);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/ManufacturedTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/ManufacturedTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class ManufacturedTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        double taxOnRaw = 0.125 * price;&#10;        return taxOnRaw + 0.02 * (price + taxOnRaw);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/RawItemTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/RawItemTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class RawItemTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        return 0.125 * price;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/RawTaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/RawTaxStrategy.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public class RawTaxStrategy implements TaxStrategy {&#10;    @Override&#10;    public double calculateTax(double price) {&#10;        return 0.125 * price;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/TaxCalculator.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/TaxCalculator.java" />
+              <option name="originalContent" value="package org.example.items;&#10;&#10;public class TaxCalculator {&#10;&#10;    public static double calculateSalesTaxPerItem(Item item) {&#10;        double price = item.getPrice();&#10;        String type = item.getType();&#10;        switch (type) {&#10;            case &quot;raw&quot;:&#10;                return 0.125 * price;&#10;            case &quot;manufactured&quot;:&#10;                double taxOnRaw = 0.125 * price;&#10;                return taxOnRaw + 0.02 * (price + taxOnRaw);&#10;            case &quot;imported&quot;:&#10;                double importDuty = 0.10 * price;&#10;                double costAfterDuty = price + importDuty;&#10;                double surcharge;&#10;                if (costAfterDuty &lt;= 100) {&#10;                    surcharge = 5;&#10;                } else if (costAfterDuty &lt;= 200) {&#10;                    surcharge = 10;&#10;                } else {&#10;                    surcharge = 0.05 * costAfterDuty;&#10;                }&#10;                return importDuty + surcharge;&#10;            default:&#10;                throw new IllegalArgumentException(&quot;Invalid item type: &quot; + type);&#10;        }&#10;    }&#10;&#10;        return item.getPrice() + calculateSalesTaxPerItem(item);&#10;        return ItemType.fromString(item.getType()).calculateFinalPrice(item.getPrice());&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package org.example.items;&#13;&#10;&#13;&#10;public class TaxCalculator {&#13;&#10;    private static TaxStrategy getStrategy(String type) {&#13;&#10;        return switch (type.toLowerCase()) {&#13;&#10;            case &quot;raw&quot; -&gt; new RawTaxStrategy();&#13;&#10;            case &quot;manufactured&quot; -&gt; new ManufacturedTaxStrategy();&#13;&#10;            case &quot;imported&quot; -&gt; new ImportedTaxStrategy();&#13;&#10;            default -&gt; throw new IllegalArgumentException(&quot;Invalid item type: &quot; + type);&#13;&#10;        };&#13;&#10;    }&#13;&#10;&#13;&#10;    public static double calculateSalesTaxPerItem(Item item) {&#13;&#10;        TaxStrategy strategy = getStrategy(item.getType());&#13;&#10;        return strategy.calculateTax(item.getPrice());&#13;&#10;    }&#13;&#10;&#13;&#10;    public static double calculateFinalPricePerItem(Item item) {&#13;&#10;        TaxStrategy strategy = getStrategy(item.getType());&#13;&#10;        return strategy.calculateFinalPrice(item.getPrice());&#13;&#10;    }&#13;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/example/items/TaxStrategy.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/main/java/org/example/items/TaxStrategy.java" />
+              <option name="originalContent" value="&#10;" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;public interface TaxStrategy {&#10;    double calculateTax(double price);&#10;    &#10;    default double calculateFinalPrice(double price) {&#10;        return price + calculateTax(price);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/org/example/items/ImportedTaxStrategyTest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/org/example/items/ImportedTaxStrategyTest.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;class ImportedTaxStrategyTest {&#10;    private final ImportedTaxStrategy strategy = new ImportedTaxStrategy();&#10;&#10;    @Test&#10;    void calculateTax_WhenPriceLessThan100_ShouldAddFlatSurchargeOf5() {&#10;        // Given&#10;        double price = 80.0;&#10;        // 8 (10% import duty) + 5 (surcharge) = 13&#10;        double expectedTax = 13.0;&#10;&#10;        // When&#10;        double actualTax = strategy.calculateTax(price);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Import tax for items &lt;= 100 should include 10% duty + 5 surcharge&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateTax_WhenPriceBetween100And200_ShouldAddFlatSurchargeOf10() {&#10;        // Given&#10;        double price = 150.0;&#10;        // 15 (10% import duty) + 10 (surcharge) = 25&#10;        double expectedTax = 25.0;&#10;&#10;        // When&#10;        double actualTax = strategy.calculateTax(price);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Import tax for items between 100 and 200 should include 10% duty + 10 surcharge&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateTax_WhenPriceAbove200_ShouldAdd5PercentSurcharge() {&#10;        // Given&#10;        double price = 500.0;&#10;        // 50 (10% import duty) + 27.5 (5% of 550) = 77.5&#10;        double expectedTax = 77.5;&#10;&#10;        // When&#10;        double actualTax = strategy.calculateTax(price);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Import tax for items &gt; 200 should include 10% duty + 5% of (price + duty)&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateFinalPrice_ShouldIncludeAllTaxesAndSurcharges() {&#10;        // Given&#10;        double price = 500.0;&#10;        // 500 + 77.5 = 577.5&#10;        double expectedFinalPrice = 577.5;&#10;&#10;        // When&#10;        double actualFinalPrice = strategy.calculateFinalPrice(price);&#10;&#10;        // Then&#10;        assertEquals(expectedFinalPrice, actualFinalPrice, 0.001, &quot;Final price should include import duty and surcharge&quot;);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/org/example/items/ManufacturedTaxStrategyTest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/org/example/items/ManufacturedTaxStrategyTest.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;class ManufacturedTaxStrategyTest {&#10;    private final ManufacturedTaxStrategy strategy = new ManufacturedTaxStrategy();&#10;&#10;    @Test&#10;    void calculateTax_ShouldIncludeBaseTaxAndManufacturingTax() {&#10;        // Given&#10;        double price = 100.0;&#10;        // 12.5 (base tax) + 2.25 (2% of 112.5) = 14.75&#10;        double expectedTax = 14.75;&#10;&#10;        // When&#10;        double actualTax = strategy.calculateTax(price);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Manufactured item tax should include base tax and 2% of (price + base tax)&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateFinalPrice_ShouldIncludeAllTaxes() {&#10;        // Given&#10;        double price = 100.0;&#10;        // 100 + 14.75 = 114.75&#10;        double expectedFinalPrice = 114.75;&#10;&#10;        // When&#10;        double actualFinalPrice = strategy.calculateFinalPrice(price);&#10;&#10;        // Then&#10;        assertEquals(expectedFinalPrice, actualFinalPrice, 0.001, &quot;Final price should include all taxes&quot;);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/org/example/items/RawTaxStrategyTest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/org/example/items/RawTaxStrategyTest.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;class RawTaxStrategyTest {&#10;    private final RawTaxStrategy strategy = new RawTaxStrategy();&#10;&#10;    @Test&#10;    void calculateTax_ShouldReturn12Point5Percent() {&#10;        // Given&#10;        double price = 100.0;&#10;        double expectedTax = 12.5; // 12.5% of 100&#10;&#10;        // When&#10;        double actualTax = strategy.calculateTax(price);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Raw item tax should be 12.5% of price&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateFinalPrice_ShouldIncludeTax() {&#10;        // Given&#10;        double price = 100.0;&#10;        double expectedFinalPrice = 112.5; // price + 12.5% tax&#10;&#10;        // When&#10;        double actualFinalPrice = strategy.calculateFinalPrice(price);&#10;&#10;        // Then&#10;        assertEquals(expectedFinalPrice, actualFinalPrice, 0.001, &quot;Final price should include 12.5% tax&quot;);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/org/example/items/TaxCalculatorTest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/org/example/items/TaxCalculatorTest.java" />
+              <option name="updatedContent" value="package org.example.items;&#10;&#10;import org.junit.jupiter.api.Test;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;class TaxCalculatorTest {&#10;    &#10;    @Test&#10;    void calculateSalesTaxPerItem_ForRawItem() {&#10;        // Given&#10;        Item item = new Item(&quot;Raw Material&quot;, 100.0, 1, &quot;raw&quot;);&#10;        double expectedTax = 12.5; // 12.5% of 100&#10;&#10;        // When&#10;        double actualTax = TaxCalculator.calculateSalesTaxPerItem(item);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Raw item tax calculation failed&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateSalesTaxPerItem_ForManufacturedItem() {&#10;        // Given&#10;        Item item = new Item(&quot;Manufactured Item&quot;, 100.0, 1, &quot;manufactured&quot;);&#10;        double expectedTax = 14.75; // 12.5 + 2% of 112.5&#10;&#10;        // When&#10;        double actualTax = TaxCalculator.calculateSalesTaxPerItem(item);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Manufactured item tax calculation failed&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateSalesTaxPerItem_ForImportedItem() {&#10;        // Given&#10;        Item item = new Item(&quot;Imported Item&quot;, 500.0, 1, &quot;imported&quot;);&#10;        double expectedTax = 77.5; // 50 (10%) + 27.5 (5% of 550)&#10;&#10;        // When&#10;        double actualTax = TaxCalculator.calculateSalesTaxPerItem(item);&#10;&#10;        // Then&#10;        assertEquals(expectedTax, actualTax, 0.001, &quot;Imported item tax calculation failed&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateFinalPricePerItem_ForAllTypes() {&#10;        // Given&#10;        Item rawItem = new Item(&quot;Raw Material&quot;, 100.0, 1, &quot;raw&quot;);&#10;        Item manufacturedItem = new Item(&quot;Manufactured Item&quot;, 100.0, 1, &quot;manufactured&quot;);&#10;        Item importedItem = new Item(&quot;Imported Item&quot;, 500.0, 1, &quot;imported&quot;);&#10;&#10;        // When &amp; Then&#10;        assertEquals(112.5, TaxCalculator.calculateFinalPricePerItem(rawItem), 0.001, &#10;            &quot;Raw item final price calculation failed&quot;);&#10;        assertEquals(114.75, TaxCalculator.calculateFinalPricePerItem(manufacturedItem), 0.001, &#10;            &quot;Manufactured item final price calculation failed&quot;);&#10;        assertEquals(577.5, TaxCalculator.calculateFinalPricePerItem(importedItem), 0.001, &#10;            &quot;Imported item final price calculation failed&quot;);&#10;    }&#10;&#10;    @Test&#10;    void calculateSalesTaxPerItem_ShouldThrowException_ForInvalidType() {&#10;        // Given&#10;        Item invalidItem = new Item(&quot;Invalid&quot;, 100.0, 1, &quot;invalid&quot;);&#10;&#10;        // When &amp; Then&#10;        assertThrows(IllegalArgumentException.class, &#10;            () -&gt; TaxCalculator.calculateSalesTaxPerItem(invalidItem),&#10;            &quot;Should throw IllegalArgumentException for invalid item type&quot;);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
