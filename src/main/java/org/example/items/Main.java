@@ -2,9 +2,6 @@ package org.example.items;
 
 import java.util.Scanner;
 
-/**
- * Main entry point: starts app, handles user input & output.
- */
 public class Main {
     public static void main(String[] args) {
         ItemManager itemManager = new ItemManager();
