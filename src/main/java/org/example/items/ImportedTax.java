@@ -8,8 +8,6 @@ public class ImportedTax implements TaxStrategy {
     private static final double SURCHARGE_2 = 10;
     private static final double DEFAULT_SURCHARGE = 0;
 
-    @Override
-    public double calculateTax(double price) {
         double importDuty = roundTax(price * IMPORT_DUTY_RATE);
         double surcharge = calculateSurcharge(price); // Using base price for threshold
         return importDuty + surcharge;
@@ -20,6 +18,8 @@ public class ImportedTax implements TaxStrategy {
             return DEFAULT_SURCHARGE;
         } else if (basePrice <= SURCHARGE_THRESHOLD_2) {
             return SURCHARGE_1;
+        } else if (costAfterDuty <= 200) {
+            surcharge = 10;
         } else {
             return SURCHARGE_2;
         }
