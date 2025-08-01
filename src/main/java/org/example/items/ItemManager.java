@@ -14,7 +14,7 @@ public class ItemManager {
     //asking for item to be added repeatedly
     public void addItemInteractively(Scanner scanner) {
         while (true) {
-            System.out.println("Enter item details in format: -name ItemName -price 100 -quantity 2 -type raw");
+            System.out.println("Enter item details in format: -name ItemName -price 100 -quantity 2 -type [RAW|MANUFACTURED|IMPORTED]");
             String input = scanner.nextLine();
             String[] args = input.trim().split("\\s+");
             try {
@@ -49,38 +49,45 @@ public class ItemManager {
     private Item createValidatedItem(Map<String, String> options) {
         if (!options.containsKey("name") || !options.containsKey("price") ||
                 !options.containsKey("quantity") || !options.containsKey("type")) {
-            throw new IllegalArgumentException("Missing required options: -name, -price, -quantity, -type");
+            throw new IllegalArgumentException("Missing required parameters. Required: name, price, quantity, type");
         }
 
         String name = options.get("name");
-        String type = options.get("type");
-
-        if (!type.equalsIgnoreCase("raw") &&
-                !type.equalsIgnoreCase("manufactured") &&
-                !type.equalsIgnoreCase("imported")) {
-            throw new IllegalArgumentException("Invalid item type. Allowed: raw, manufactured, imported.");
+        if (name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty");
         }
 
         double price;
         try {
             price = Double.parseDouble(options.get("price"));
-            if (price < 0) throw new NumberFormatException();
+            if (price <= 0) {
+                throw new IllegalArgumentException("Price must be greater than 0");
+            }
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Invalid price: must be a positive number.");
+            throw new IllegalArgumentException("Invalid price format");
         }
 
         int quantity;
         try {
             quantity = Integer.parseInt(options.get("quantity"));
-            if (quantity <= 0) throw new NumberFormatException();
+            if (quantity <= 0) {
+                throw new IllegalArgumentException("Quantity must be greater than 0");
+            }
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Invalid quantity: must be a positive integer.");
+            throw new IllegalArgumentException("Invalid quantity format");
+        }
+
+        ItemType type;
+        try {
+            type = ItemType.valueOf(options.get("type").toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid type. Must be one of: RAW, MANUFACTURED, IMPORTED");
         }
 
         return new Item(name, price, quantity, type);
     }
 
     public List<Item> getItems() {
-        return items;
+        return Collections.unmodifiableList(items);
     }
 }
